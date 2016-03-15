@@ -153,21 +153,6 @@ local_tsp/fast:
 .PHONY : local_tsp/fast
 
 # target to build an object file
-Loader.o:
-	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/Loader.o
-.PHONY : Loader.o
-
-# target to preprocess a source file
-Loader.i:
-	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/Loader.i
-.PHONY : Loader.i
-
-# target to generate assembly for a file
-Loader.s:
-	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/Loader.s
-.PHONY : Loader.s
-
-# target to build an object file
 city.o:
 	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/city.o
 .PHONY : city.o
@@ -181,6 +166,36 @@ city.i:
 city.s:
 	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/city.s
 .PHONY : city.s
+
+# target to build an object file
+graphe.o:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/graphe.o
+.PHONY : graphe.o
+
+# target to preprocess a source file
+graphe.i:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/graphe.i
+.PHONY : graphe.i
+
+# target to generate assembly for a file
+graphe.s:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/graphe.s
+.PHONY : graphe.s
+
+# target to build an object file
+loader.o:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/loader.o
+.PHONY : loader.o
+
+# target to preprocess a source file
+loader.i:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/loader.i
+.PHONY : loader.i
+
+# target to generate assembly for a file
+loader.s:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/loader.s
+.PHONY : loader.s
 
 # target to build an object file
 main.o:
@@ -210,12 +225,15 @@ help:
 	@echo "... list_install_components"
 	@echo "... local_tsp"
 	@echo "... rebuild_cache"
-	@echo "... Loader.o"
-	@echo "... Loader.i"
-	@echo "... Loader.s"
 	@echo "... city.o"
 	@echo "... city.i"
 	@echo "... city.s"
+	@echo "... graphe.o"
+	@echo "... graphe.i"
+	@echo "... graphe.s"
+	@echo "... loader.o"
+	@echo "... loader.i"
+	@echo "... loader.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
