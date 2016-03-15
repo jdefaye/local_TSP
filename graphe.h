@@ -59,8 +59,7 @@ class Graph {
     /*
      * Construit une solution aléatoire
      */
-    static void init();
-    
+    static void init();   
     
     /*
      * Evalue la configuration

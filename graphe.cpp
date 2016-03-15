@@ -30,14 +30,6 @@ std::ostream& Graph::print(std::ostream& out) const {
   }
 }
 
-
-/**
- * Chargement d'un fichier d'instance (coordonnées des villes)
- */
-void Graph::load_instance(char* filename) {
-  return ;
-}
-
 /**
  * Construction de la matrice
  *  à partir de la formule sqrt( pow(x1 - x2, 2) + pow(y1 - y2, 2) )

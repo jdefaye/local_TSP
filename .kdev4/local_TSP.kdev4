@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 [Buildset]
 BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x12\x00l\x00o\x00c\x00a\x00l\x00_\x00T\x00S\x00P)
 
-=======
->>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 [CMake]
 Build Directory Count=1
 Current Build Directory Index=0
@@ -13,11 +10,7 @@ ProjectRootRelative=./
 Build Directory Path=file:///home/etudiant/projects/local_TSP/build
 Build Type=Debug
 CMake Binary=file:///usr/bin/cmake
-<<<<<<< HEAD
-Environment Profile=default
-=======
 Environment Profile=
->>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 Extra Arguments=
 Install Directory=file:///usr/local
 
@@ -27,24 +20,11 @@ Launch Configurations=Launch Configuration 0
 [Launch][Launch Configuration 0]
 Configured Launch Modes=execute
 Configured Launchers=nativeAppLauncher
-<<<<<<< HEAD
-Name=local_tsp
-=======
 Name=Nouveau lanceur Application (2)
->>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 Type=Native Application
 
 [Launch][Launch Configuration 0][Data]
 Arguments=
-<<<<<<< HEAD
-Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x12\x00l\x00o\x00c\x00a\x00l\x00_\x00T\x00S\x00P\x00\x00\x00\x12\x00l\x00o\x00c\x00a\x00l\x00_\x00t\x00s\x00p)
-Dependency Action=Build
-EnvironmentGroup=default
-Executable=file:///home/etudiant/projects/local_TSP/
-External Terminal=xterm -hold -e %exe
-Project Target=local_TSP,local_tsp
-Use External Terminal=true
-=======
 Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
 Dependency Action=Nothing
 EnvironmentGroup=default
@@ -52,6 +32,5 @@ Executable=file:///home/etudiant/projects/local_TSP/
 External Terminal=konsole --noclose --workdir %workdir -e %exe
 Project Target=local_TSP,local_tsp
 Use External Terminal=false
->>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 Working Directory=
 isExecutable=false
