@@ -6,6 +6,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <vector>
+<<<<<<< HEAD
+=======
+#include <ctime>
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 
 #include "loader.h"
 #include "city.h"
@@ -16,6 +20,10 @@ class Graph {
     int nb_city;
     std::vector<City> cities;
     float ** distances;
+<<<<<<< HEAD
+=======
+    static int * configuration;
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
     
   public:
     Graph();
@@ -48,11 +56,31 @@ class Graph {
 
     friend std::ostream& operator<<(std::ostream& out, const Graph & g) { return g.print(out); }
     
+<<<<<<< HEAD
+=======
+    void load_instance(char * filename);
+    
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
     void build_matrix();
     
     float compute_distance(City A, City B);
     
+<<<<<<< HEAD
     
+=======
+    /** AUTRES METHODES **/
+    
+    /*
+     * Construit une solution aléatoire
+     */
+    static void init();
+    
+    
+    /*
+     * Evalue la configuration
+     */
+    float eval() const;
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 };
 
 #endif

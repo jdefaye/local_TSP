@@ -32,7 +32,11 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
 //Flags used by the compiler during all build types.
+<<<<<<< HEAD
 CMAKE_CXX_FLAGS:STRING=-std=c++11
+=======
+CMAKE_CXX_FLAGS:STRING=
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 
 //Flags used by the compiler during debug builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g

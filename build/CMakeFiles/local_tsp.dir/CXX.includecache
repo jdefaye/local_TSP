@@ -10,6 +10,13 @@
 iostream
 -
 
+<<<<<<< HEAD
+=======
+/home/etudiant/projects/local_TSP/graphe.cpp
+graphe.h
+/home/etudiant/projects/local_TSP/graphe.h
+
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 /home/etudiant/projects/local_TSP/graphe.h
 algorithm
 -
@@ -21,6 +28,11 @@ cstdlib
 -
 vector
 -
+<<<<<<< HEAD
+=======
+ctime
+-
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
 loader.h
 /home/etudiant/projects/local_TSP/loader.h
 city.h
@@ -42,6 +54,7 @@ city.h
 stdlib.h
 -
 
+<<<<<<< HEAD
 /home/etudiant/projects/local_TSP/main.cpp
 iostream
 -
@@ -50,3 +63,5 @@ graphe.h
 loader.h
 /home/etudiant/projects/local_TSP/loader.h
 
+=======
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc

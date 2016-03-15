@@ -30,6 +30,14 @@ std::ostream& Graph::print(std::ostream& out) const {
   }
 }
 
+
+/**
+ * Chargement d'un fichier d'instance (coordonnées des villes)
+ */
+void Graph::load_instance(char* filename) {
+  return ;
+}
+
 /**
  * Construction de la matrice
  *  à partir de la formule sqrt( pow(x1 - x2, 2) + pow(y1 - y2, 2) )
@@ -39,7 +47,7 @@ void Graph::build_matrix() {
   for(int i=0 ; i<nb_city ; i++) {
     distances[i] = (float *) malloc(nb_city * sizeof(float ));
   }
-  
+
   // Parcours de la liste des villes
   City city_1;
   City city_2;
@@ -62,5 +70,19 @@ float Graph::compute_distance(City A, City B) {
   return sqrt(pow(A.get_x() - B.get_x(), 2) + pow(A.get_y() - B.get_y(), 2));
 }
 
+static void Graph::init()
+{
+  configuration = (int *)malloc(nb_city*sizeof(int));
+  for (int i = 0; i < nb_city; ++i) {
+    configuration[i] = cities[i].get_id();
+  }
+}
 
 
+float Graph::eval() const
+{
+  float retour = 0;
+  for (int i = 0; i < (nb_city - 1); ++i) {
+    retour += distances[configuration[i]][configuration[i+1]];
+  }
+}

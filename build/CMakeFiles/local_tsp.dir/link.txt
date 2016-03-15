@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /usr/bin/c++   -std=c++11 -g    CMakeFiles/local_tsp.dir/loader.o CMakeFiles/local_tsp.dir/city.o CMakeFiles/local_tsp.dir/graphe.o CMakeFiles/local_tsp.dir/main.o  -o local_tsp -rdynamic 
+=======
+/usr/bin/c++   -g    CMakeFiles/local_tsp.dir/city.o CMakeFiles/local_tsp.dir/graphe.o CMakeFiles/local_tsp.dir/loader.o CMakeFiles/local_tsp.dir/main.o  -o local_tsp -rdynamic 
+>>>>>>> 519644312f8c69484c5d3594f90f9c7dd5b800fc
