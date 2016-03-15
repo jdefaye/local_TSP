@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/etudiant/projects/local_TSP/Loader.cpp
+Loader.h
+/home/etudiant/projects/local_TSP/Loader.h
+
+/home/etudiant/projects/local_TSP/Loader.h
+iostream
+-
+string
+-
+sstream
+-
+vector
+-
+fstream
+-
+city.h
+/home/etudiant/projects/local_TSP/city.h
+stdlib.h
+-
+
+/home/etudiant/projects/local_TSP/city.h
+iostream
+-
+
+/home/etudiant/projects/local_TSP/main.cpp
+iostream
+-
+Loader.h
+/home/etudiant/projects/local_TSP/Loader.h
+

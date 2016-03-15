@@ -1,0 +1,4 @@
+[Project]
+Name=local_TSP
+Manager=KDevCMakeManager
+VersionControl=
