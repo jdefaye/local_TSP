@@ -17,6 +17,7 @@ class Graph {
     int nb_city;
     std::vector<City> cities;
     float ** distances;
+    
     static int * configuration;
     
   public:
@@ -57,9 +58,9 @@ class Graph {
     /** AUTRES METHODES **/
     
     /*
-     * Construit une solution aléatoire
+     * Construit une solution basé sur le Graph G
      */
-    static void init();   
+    static void init(const Graph &  G);
     
     /*
      * Evalue la configuration

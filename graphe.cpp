@@ -62,15 +62,21 @@ float Graph::compute_distance(City A, City B) {
   return sqrt(pow(A.get_x() - B.get_x(), 2) + pow(A.get_y() - B.get_y(), 2));
 }
 
-static void Graph::init()
-{
-  configuration = (int *)malloc(nb_city*sizeof(int));
-  for (int i = 0; i < nb_city; ++i) {
-    configuration[i] = cities[i].get_id();
-  }
+void Graph::init(const Graph &  G) {
+  configuration = (int *)malloc(G.nb_city * sizeof(int));
 }
 
 
+/*
+void Graph::init(Graph G) {
+  configuration = (int *)malloc(G.nb_city*sizeof(int));
+  for (int i = 0; i < G.nb_city; ++i) {
+    configuration[i] = G.cities[i].get_id();
+  }
+}
+*/
+
+/*
 float Graph::eval() const
 {
   float retour = 0;
@@ -78,3 +84,4 @@ float Graph::eval() const
     retour += distances[configuration[i]][configuration[i+1]];
   }
 }
+*/
