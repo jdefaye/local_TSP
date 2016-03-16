@@ -1,3 +1,6 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x12\x00l\x00o\x00c\x00a\x00l\x00_\x00T\x00S\x00P)
+
 [CMake]
 Build Directory Count=1
 Current Build Directory Index=0
@@ -31,3 +34,6 @@ Project Target=local_TSP,local_tsp
 Use External Terminal=false
 Working Directory=
 isExecutable=false
+
+[Project]
+VersionControlSupport=kdevgit
