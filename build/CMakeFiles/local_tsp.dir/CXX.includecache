@@ -48,3 +48,11 @@ city.h
 stdlib.h
 -
 
+/home/etudiant/projects/local_TSP/main.cpp
+iostream
+-
+graphe.h
+/home/etudiant/projects/local_TSP/graphe.h
+loader.h
+/home/etudiant/projects/local_TSP/loader.h
+

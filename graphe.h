@@ -17,6 +17,7 @@ class Graph {
     int nb_city;
     std::vector<City> cities;
     float ** distances;
+    
     static int * configuration;
     
   public:
@@ -50,8 +51,6 @@ class Graph {
 
     friend std::ostream& operator<<(std::ostream& out, const Graph & g) { return g.print(out); }
     
-    void load_instance(char * filename);
-    
     void build_matrix();
     
     float compute_distance(City A, City B);
@@ -59,10 +58,9 @@ class Graph {
     /** AUTRES METHODES **/
     
     /*
-     * Construit une solution aléatoire
+     * Construit une solution basé sur le Graph G
      */
-    static void init();
-    
+    static void init(const Graph &  G);
     
     /*
      * Evalue la configuration

@@ -1,5 +1,5 @@
 project(local_tsp)
 
-add_executable(local_tsp city.cpp graphe.cpp loader.cpp main.cpp)
+add_executable(local_tsp loader.cpp city.cpp graphe.cpp main.cpp)
 
 install(TARGETS local_tsp RUNTIME DESTINATION bin)

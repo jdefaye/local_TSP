@@ -24,17 +24,10 @@ std::ostream& Graph::print(std::ostream& out) const {
   
   for(int i=0 ; i<nb_city ; i++) {
     for(int j=0 ; j<nb_city ; j++) {
-      out << distances[i][j] << endl;
+      out << distances[i][j];
     }
+    out << endl;
   }
-}
-
-
-/**
- * Chargement d'un fichier d'instance (coordonnées des villes)
- */
-void Graph::load_instance(char* filename) {
-  return ;
 }
 
 /**
@@ -43,8 +36,10 @@ void Graph::load_instance(char* filename) {
  */
 void Graph::build_matrix() {
   distances = (float **) malloc(nb_city * sizeof(float *));
-  (*distances) = (float *) malloc(nb_city * sizeof(float ));
-  
+  for(int i=0 ; i<nb_city ; i++) {
+    distances[i] = (float *) malloc(nb_city * sizeof(float ));
+  }
+
   // Parcours de la liste des villes
   City city_1;
   City city_2;
@@ -56,7 +51,6 @@ void Graph::build_matrix() {
       distance = compute_distance(city_1, city_2);
       distances[i][j] = distance;
       distances[j][i] = distance;
-      cout << distances[i][j] << endl;
     }
   }
 }
@@ -68,17 +62,21 @@ float Graph::compute_distance(City A, City B) {
   return sqrt(pow(A.get_x() - B.get_x(), 2) + pow(A.get_y() - B.get_y(), 2));
 }
 
-
-
-static void Graph::init()
-{
-  configuration = (int *)malloc(nb_city*sizeof(int));
-  for (int i = 0; i < nb_city; ++i) {
-    configuration[i] = cities[i].get_id();
-  }
+void Graph::init(const Graph &  G) {
+  configuration = (int *)malloc(G.nb_city * sizeof(int));
 }
 
 
+/*
+void Graph::init(Graph G) {
+  configuration = (int *)malloc(G.nb_city*sizeof(int));
+  for (int i = 0; i < G.nb_city; ++i) {
+    configuration[i] = G.cities[i].get_id();
+  }
+}
+*/
+
+/*
 float Graph::eval() const
 {
   float retour = 0;
@@ -86,6 +84,4 @@ float Graph::eval() const
     retour += distances[configuration[i]][configuration[i+1]];
   }
 }
-
-
-
+*/

@@ -1,0 +1,11 @@
+continue <- vrai
+init(A); (aléatoirement ?)
+tant que continue faire
+  choisir x ∈ A
+  choisir x' ∈ N(x)	(voisins)			... si tout N(x) est exploré, marquer x
+  A <- A U { x' }
+  filtrer A		(online)
+  Si toute solutions de A sont marquées
+    alors continue <- faux
+fin tant que
+retourner A
