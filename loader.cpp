@@ -27,7 +27,6 @@ City Loader::read_line(const string& line, char sep)
   int x, y, id;
   stringstream ss(line);
   string tmp;
-  
   getline(ss, tmp, sep); // lecture de l'id
   id = atoi(tmp.c_str());
   
@@ -38,7 +37,6 @@ City Loader::read_line(const string& line, char sep)
   y = atoi(tmp.c_str());
   
   City ville(id, x, y);
-  
   return ville;
 }
 

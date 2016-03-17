@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <cmath>
 #include <iostream>
+#include <cstdio>
 #include <cstdlib>
 #include <vector>
 #include <ctime>
@@ -18,21 +19,22 @@ class Graph {
     std::vector<City> cities;
     float ** distances;
     
-    static int * configuration;
     
   public:
+    static int * configuration;
+    
     Graph();
     Graph(std::string filename);
     Graph(std::vector<City> cities);
     
     /**	GETTERS	**/
-    std::string get_filename() { return filename; }
+    std::string get_filename() const { return filename; }
     
-    int get_nbCity() { return nb_city; }
+    int get_nbCity() const { return nb_city; }
     
-    std::vector<City> get_cities() { return cities; }
+    std::vector<City> get_cities() const { return cities; }
     
-    float ** get_distances() { return distances; }
+    float ** get_distances() const { return distances; }
     
     
     /**	SETTERS	**/
@@ -66,6 +68,11 @@ class Graph {
      * Evalue la configuration
      */
     float eval() const;
+    
+    /*
+     * Construit une solution aléatoire
+     */
+    static void init_alea(const Graph & G);
 };
 
 #endif

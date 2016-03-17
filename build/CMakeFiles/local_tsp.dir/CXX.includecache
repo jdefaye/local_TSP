@@ -10,16 +10,14 @@
 iostream
 -
 
-/home/etudiant/projects/local_TSP/graphe.cpp
-graphe.h
-/home/etudiant/projects/local_TSP/graphe.h
-
 /home/etudiant/projects/local_TSP/graphe.h
 algorithm
 -
 cmath
 -
 iostream
+-
+cstdio
 -
 cstdlib
 -

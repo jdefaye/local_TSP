@@ -15,11 +15,11 @@ class City {
     City(int id, int x, int y);
     
     /**	GETTERS	**/
-    int get_id() { return id; }
+    int get_id() const { return id; }
     
-    int get_x() { return x; }
+    int get_x() const { return x; }
     
-    int get_y() { return y; }
+    int get_y() const { return y; }
     
     /**	SETTERS	**/
     void set_id(int id) { this->id = id; }

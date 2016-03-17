@@ -3,8 +3,8 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/local_tsp.dir/city.o"
   "CMakeFiles/local_tsp.dir/graphe.o"
   "CMakeFiles/local_tsp.dir/main.o"
-  "======local_tsp.pdb"
-  "======local_tsp"
+  "local_tsp.pdb"
+  "local_tsp"
 )
 
 # Per-language clean rules from dependency scanning.
