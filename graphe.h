@@ -26,6 +26,7 @@ class Graph {
     Graph();
     Graph(std::string filename);
     Graph(std::vector<City> cities);
+    //~Graph();
     
     /**	GETTERS	**/
     std::string get_filename() const { return filename; }
@@ -60,9 +61,16 @@ class Graph {
     /** AUTRES METHODES **/
     
     /*
-     * Construit une solution basé sur le Graph G
+     * Construit une solution basée sur le Graph G
      */
     static void init(const Graph &  G);
+    
+    
+    /*
+     * Libère l'espace mémoire pris lors de l'initialisation
+     */
+    static void free_configuration();
+    
     
     /*
      * Evalue la configuration

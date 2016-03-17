@@ -15,6 +15,12 @@ Graph::Graph(std::string filename) {
     build_matrix();
 }
 
+/*Graph::~Graph()
+{
+  free(configuration);
+}*/
+
+
 std::ostream& Graph::print(std::ostream& out) const {
   out << "Graphe : " << endl;
   out << "\tFichier : " << filename << endl;
@@ -72,11 +78,17 @@ void Graph::init(const Graph &  G) {
 }
 
 
+void Graph::free_configuration()
+{
+  free(configuration);
+}
+
+
+
 float Graph::eval() const
 {
   float retour = 0;
   for (int i = 0; i < (nb_city - 1); ++i) {
-    cout << configuration[i] - 1 << " " << configuration[i+1] - 1 << endl;
     retour += distances[configuration[i] - 1][configuration[i+1] - 1];
   }
   return retour;
