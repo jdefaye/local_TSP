@@ -3,6 +3,8 @@
 #include "graphe.h"
 #include "loader.h"
 
+#define P 5
+
 using namespace std;
 
 
@@ -12,7 +14,9 @@ int main(int argc, char **argv) {
     string tableau_instances[7] = {"kroAB100", "kroBC100", "kroCD100", "kroDE100", "kroAE100", "kroAB150", "kroAB200"};
     pair<string, string> tableau_fichier_instances[7] = {make_pair("kroA100.tsp", "kroB100.tsp"),make_pair("kroB100.tsp", "kroC100.tsp"),make_pair("kroC100.tsp", "kroD100.tsp"),make_pair("kroD100.tsp", "kroE100.tsp"),make_pair("kroA100.tsp", "kroE100.tsp"),make_pair("kroA150.tsp", "kroB150.tsp"),make_pair("kroA200.tsp", "kroB200.tsp")};
     for (int i = 0; i < 7; ++i) {
-     vector<pair<float, float > > ensemble_solution;
+     vector<pair<float, float > > ensemble_solution, solution_pareto;
+     ensemble_solution.reserve(500);
+     ensemble_solution.resize(500);
      string nom_fichier1 = chemin_repertoire_instance + tableau_fichier_instances[i].first;
      string nom_fichier2 = chemin_repertoire_instance + tableau_fichier_instances[i].second;
      ofstream fichier("../resultat/offline500_" + tableau_instances[i] + ".txt", ios::out | ios::trunc);
@@ -20,12 +24,32 @@ int main(int argc, char **argv) {
      if (fichier&&fichier_pareto) {
       Graph G1(nom_fichier1);
       Graph G2(nom_fichier2);
+      /*
       for (int j = 0; j < 500; ++j) {
 	G1.init_alea(G1);
 	pair<float, float> une_solution = make_pair(G1.eval(), G2.eval());
-	ensemble_solution.push_back(une_solution);
+	ensemble_solution[j] = une_solution;
 	fichier << une_solution.first << " " << une_solution.second << endl;
       }
+      //offline
+      for (int j = 0; j < 500; ++j) {
+	bool b = true;
+	for (int k = 0; (k < 500)&&b; ++k) {
+	  if ((ensemble_solution[j].first > ensemble_solution[k].first)&&(ensemble_solution[j].second > ensemble_solution[k].second)) b = false;
+	}
+	if (b) {
+	  solution_pareto.push_back(ensemble_solution[j]);
+	  fichier_pareto << ensemble_solution[j].first << " " << ensemble_solution[j].second << endl;
+	}
+      }*/
+      //online
+      
+      for (int j = 0; j < P; ++j) {
+	
+      }
+      
+      
+      
       fichier.close();
       fichier_pareto.close();
      }
