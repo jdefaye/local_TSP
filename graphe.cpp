@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int * Graph::configuration;
+vector<int> Graph::configuration;
 
 Graph::Graph() {}
 
@@ -71,17 +71,33 @@ float Graph::compute_distance(City A, City B) {
 }
 
 void Graph::init(const Graph &  G) {
-  configuration = (int *)malloc(G.nb_city * sizeof(int));
+  configuration.resize(G.nb_city);
   for (int i = 0; i < G.nb_city; ++i) {
     configuration[i] = G.cities[i].get_id();
   }
 }
 
 
-void Graph::free_configuration()
+void Graph::build_neighbour(int pos_city1, int pos_city2)
 {
-  free(configuration);
+  if (pos_city1 != pos_city2) {
+    if (pos_city1 > pos_city2) {
+      int tmp = pos_city1;
+      pos_city1 = pos_city2;
+      pos_city2 = tmp;
+    }
+    int nb_it = pos_city2 - ((1 + pos_city2 - pos_city1)/2);
+    int tmp, j = 0;
+    for (int i = pos_city1; i <= nb_it; ++i) {
+      tmp = configuration[i];
+      configuration[i] = configuration[pos_city2 - j];
+      configuration[pos_city2 - j] = tmp;
+      j++;
+    }
+  }
 }
+
+
 
 
 
@@ -97,7 +113,7 @@ float Graph::eval() const
 
 void Graph::init_alea(const Graph& G)
 {
-  configuration = (int *)malloc(G.get_nbCity() * sizeof(int));
+  configuration.resize(G.get_nbCity());
   int tableau_initial[G.get_nbCity()];
   int n, tmp;
   for (int i = 0; i < G.get_nbCity(); ++i) tableau_initial[i] = G.cities[i].get_id();

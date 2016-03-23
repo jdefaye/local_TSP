@@ -212,6 +212,21 @@ main.s:
 	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/main.s
 .PHONY : main.s
 
+# target to build an object file
+solution.o:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/solution.o
+.PHONY : solution.o
+
+# target to preprocess a source file
+solution.i:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/solution.i
+.PHONY : solution.i
+
+# target to generate assembly for a file
+solution.s:
+	$(MAKE) -f CMakeFiles/local_tsp.dir/build.make CMakeFiles/local_tsp.dir/solution.s
+.PHONY : solution.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -237,6 +252,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... solution.o"
+	@echo "... solution.i"
+	@echo "... solution.s"
 .PHONY : help
 
 

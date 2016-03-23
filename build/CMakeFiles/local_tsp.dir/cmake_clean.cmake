@@ -1,4 +1,5 @@
 FILE(REMOVE_RECURSE
+  "CMakeFiles/local_tsp.dir/solution.o"
   "CMakeFiles/local_tsp.dir/loader.o"
   "CMakeFiles/local_tsp.dir/city.o"
   "CMakeFiles/local_tsp.dir/graphe.o"

@@ -18,3 +18,7 @@ CMakeFiles/local_tsp.dir/main.o
  /home/etudiant/projects/local_TSP/graphe.h
  /home/etudiant/projects/local_TSP/loader.h
  /home/etudiant/projects/local_TSP/main.cpp
+ /home/etudiant/projects/local_TSP/solution.h
+CMakeFiles/local_tsp.dir/solution.o
+ /home/etudiant/projects/local_TSP/solution.cpp
+ /home/etudiant/projects/local_TSP/solution.h

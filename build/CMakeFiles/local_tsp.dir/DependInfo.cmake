@@ -8,6 +8,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/etudiant/projects/local_TSP/graphe.cpp" "/home/etudiant/projects/local_TSP/build/CMakeFiles/local_tsp.dir/graphe.o"
   "/home/etudiant/projects/local_TSP/loader.cpp" "/home/etudiant/projects/local_TSP/build/CMakeFiles/local_tsp.dir/loader.o"
   "/home/etudiant/projects/local_TSP/main.cpp" "/home/etudiant/projects/local_TSP/build/CMakeFiles/local_tsp.dir/main.o"
+  "/home/etudiant/projects/local_TSP/solution.cpp" "/home/etudiant/projects/local_TSP/build/CMakeFiles/local_tsp.dir/solution.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

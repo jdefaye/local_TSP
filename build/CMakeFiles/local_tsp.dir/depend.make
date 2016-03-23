@@ -17,4 +17,8 @@ CMakeFiles/local_tsp.dir/main.o: ../city.h
 CMakeFiles/local_tsp.dir/main.o: ../graphe.h
 CMakeFiles/local_tsp.dir/main.o: ../loader.h
 CMakeFiles/local_tsp.dir/main.o: ../main.cpp
+CMakeFiles/local_tsp.dir/main.o: ../solution.h
+
+CMakeFiles/local_tsp.dir/solution.o: ../solution.cpp
+CMakeFiles/local_tsp.dir/solution.o: ../solution.h
 

@@ -21,7 +21,7 @@ class Graph {
     
     
   public:
-    static int * configuration;
+    static std::vector<int> configuration;
     
     Graph();
     Graph(std::string filename);
@@ -70,6 +70,11 @@ class Graph {
      * Libère l'espace mémoire pris lors de l'initialisation
      */
     static void free_configuration();
+    
+    /*
+     * Modifie la configuration, en une configuration voisine, choisis avec l'opérateur de voisinage 2-opt appliqué sur les deux villes passées en paramètre
+     */
+    void build_neighbour(int pos_city1, int pos_city2);
     
     
     /*
